@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Giriş / Kayıt Ol</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="bildirim-kutusu"></div>
+
+    <div class="auth-wrapper">
+        <div class="auth-container">
+            <h2 id="form-title">Giriş Yap</h2>
+            <form id="authForm">
+                <input type="text" id="reg-username" placeholder="Kullanıcı Adı" style="display:none;">
+                <input type="email" id="email" placeholder="E-posta" required>
+                <input type="password" id="password" placeholder="Şifre" required>
+                <input type="password" id="password-confirm" placeholder="Şifre Tekrar" style="display:none;">
+                <button type="submit" id="submitBtn">Giriş Yap</button>
+            </form>
+            <span class="toggle-link" id="toggleLink">Hesabın yok mu? Kayıt Ol</span>
+            <a href="index.html" class="back-link">← Ana Sayfaya Dön</a>
+        </div>
+    </div>
+    <script src="js/auth.js"></script>
+</body>
+
+</html>

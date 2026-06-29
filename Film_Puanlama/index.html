@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Film Dünyası</title>
+    
+    <link rel="preconnect" href="https://api.themoviedb.org">
+    <link rel="preconnect" href="https://image.tmdb.org">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="bildirim-kutusu"></div>
+
+    <div class="ust-panel">
+        <div class="sol-bolum">
+            <h2 onclick="location.href='index.html'" class="logo">Film Dünyası</h2>
+            <button onclick="filmAraci.enYuksekPuanlilariYukle()" class="ust-link-btn">En Yüksek Puanlı Filmler</button>
+        </div>
+
+        <form id="arama-formu">
+            <div class="arama-kutusu">
+                <input type="text" id="arama-girdisi" placeholder="Film Ara...">
+                <button type="submit" class="arama-btn">🔍</button>
+            </div>
+        </form>
+
+        <div id="sag-bolum">
+            <div id="giris-bolumu">
+                <button onclick="location.href='auth.html?mode=login'" class="nav-buton">Giriş Yap</button>
+                <button onclick="location.href='auth.html?mode=register'" class="nav-buton">Üye Ol</button>
+            </div>
+            <div id="kullanici-bolumu" style="display: none;">
+                <button id="profil-butonu" class="nav-buton profil-temasi">Profilim</button>
+                <button id="cikis-butonu" class="nav-buton cikis-temasi">Çıkış Yap</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="geri-buton-alani" style="display: none;">
+        <button onclick="filmAraci.anasayfayaDon()" class="geri-btn">← Geri</button>
+    </div>
+
+    <div class="film-listesi"></div>
+
+    <div class="sayfalama-alani">
+        <button id="onceki-sayfa" class="sayfa-btn">Geri</button>
+        <span id="sayfa-no">1</span>
+        <button id="sonraki-sayfa" class="sayfa-btn">İleri</button>
+    </div>
+    <footer class="site-footer">
+        <div class="footer-icerik">
+            <div class="footer-kutu">
+                <h3>Misyonumuz</h3>
+                <p>Sinema tutkunlarını en güncel ve kaliteli içeriklerle buluşturarak, film keşfetme ve değerlendirme
+                    sürecini kişisel, şeffaf ve keyifli bir deneyime dönüştürmek.</p>
+            </div>
+            <div class="footer-kutu">
+                <h3>Vizyonumuz</h3>
+                <p>Gelişmiş arama, puanlama ve topluluk dinamikleriyle Türkiye'nin en çok tercih edilen ve güvenilen
+                    bağımsız film etkileşim platformu olmak.</p>
+            </div>
+        </div>
+        <div class="footer-alt">
+            &copy; 2026 Film Dünyası Projesi. Tüm Hakları Saklıdır.
+        </div>
+    </footer>
+    
+    <script src="js/app.js"></script>
+</body>
+
+</html>
